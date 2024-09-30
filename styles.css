@@ -1,0 +1,201 @@
+html {
+    background-color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('wallpaperbetter.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;   
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+img {
+    height: 100%;
+}
+
+nav .button-container {
+    display: flex;
+}
+
+.header-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.header-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around; /* จัดให้อยู่ระหว่างกัน */
+    flex-wrap: wrap; /* ทำให้สามารถจัดเรียงใหม่ได้เมื่อมีการย่อ */
+    margin: 20px 0; /* เพิ่มระยะห่างบนและล่าง */
+}
+
+.flex-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px; /* ระยะห่างระหว่าง flex items */
+    text-align: center;
+    width: calc(33% - 20px); /* คำนวณความกว้างสำหรับ 3 items ใน 1 แถว */
+}
+
+.flex-image {
+    max-width: 100%; /* ป้องกันการขยายเกินความกว้าง */
+    height: auto; /* ให้รักษาสัดส่วน */
+}
+.flex-button {
+    background-color: black; /* สีพื้นหลังของปุ่ม */
+    color: white; /* สีข้อความของปุ่ม */
+    padding: 10px 20px; /* ขนาดของปุ่ม */
+    border: none; /* ไม่มีขอบ */
+    cursor: pointer; /* แสดงว่าคลิกได้ */
+    margin: 5%;
+}
+
+.flex-button:hover {
+    background-color: white; /* เปลี่ยนสีพื้นหลังเมื่อเอาเมาส์ไปทับ */
+    color: black; /* เปลี่ยนสีข้อความเมื่อเอาเมาส์ไปทับ */
+}
+.message-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    top: 8%;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    position: relative; /* เปลี่ยนเป็น relative */
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .flex-item {
+        width: calc(50% - 20px); /* 2 items ใน 1 แถว */
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-item {
+        width: 100%; /* 1 item ใน 1 แถว */
+    }
+}
+
+/* ส่วนของกล่องติดต่อ */
+.contact-container {
+    margin: 100px auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-container h1 {
+    text-align: center;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-container button:hover {
+    background-color: #555;
+}
+
+.about-container {
+    padding: 50px;
+}
+
+.about-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-button:hover {
+    background-color: gray;
+}

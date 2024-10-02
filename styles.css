@@ -21,6 +21,7 @@ header {
     background-color: black;
     color: white;
     padding: 10px 20px;
+    flex-wrap: nowrap; /* ป้องกันไม่ให้ header ย่อแถว */
 }
 
 img {
@@ -29,6 +30,7 @@ img {
 
 nav .button-container {
     display: flex;
+    flex-direction: row; /* จัดเรียงปุ่มในแนวนอน */
 }
 
 .header-button {
@@ -67,6 +69,7 @@ nav .button-container {
     max-width: 100%; /* ป้องกันการขยายเกินความกว้าง */
     height: auto; /* ให้รักษาสัดส่วน */
 }
+
 .flex-button {
     background-color: black; /* สีพื้นหลังของปุ่ม */
     color: white; /* สีข้อความของปุ่ม */
@@ -80,6 +83,7 @@ nav .button-container {
     background-color: white; /* เปลี่ยนสีพื้นหลังเมื่อเอาเมาส์ไปทับ */
     color: black; /* เปลี่ยนสีข้อความเมื่อเอาเมาส์ไปทับ */
 }
+
 .message-box {
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
@@ -105,6 +109,19 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* เมื่อหน้าจอเล็กลงให้ header ย่อแถว */
+    }
+
+    nav .button-container {
+        justify-content: center;
+        flex-wrap: wrap; /* เมื่อหน้าจอเล็กลงให้ปุ่มจัดเรียงใหม่ */
+    }
+
+    .header-button {
+        margin: 5px 0; /* ลดระยะห่างของปุ่มเมื่อย่อแถว */
+    }
+
     .flex-item {
         width: calc(50% - 20px); /* 2 items ใน 1 แถว */
     }

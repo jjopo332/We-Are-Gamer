@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css"> 
+    <script src="javascript.js"></script>
 </head>
 <body>
     <header>
-        <img src="logp_page-0001__1_-removebg-preview.png" alt="Logo"> 
+        <img src="LOGO.png
+        " alt="Logo"> 
         <nav>
             <div class="button-container">
                 <button class="header-button" onclick="location.href='index.html'">หน้าแรก</button>
@@ -21,18 +23,17 @@
    
     <div class="contact-container">
         <h1>ติดต่อเรา</h1>
-        <form>
-            <label for="name">ชื่อ:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+        <form id="emailForm">
+            <label>ชื่อของคุณ:</label>
+            <input type="text" id="name" required><br>
+            <label>อีเมลของคุณ:</label>
+            <input type="email" id="fromEmail" required><br>
+            <label>ข้อความ:</label>
+            <textarea id="message" required></textarea><br>
+            <button type="button" onclick="sendEmail()">ส่งอีเมลหาเรา</button>
+        </form>
+        
             
-            <label for="email">อีเมล:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            
-            <label for="message">ให้คำแนะนำ:</label><br>
-            <textarea id="message" name="message" rows="5" cols="50"></textarea><br><br>
-            
-            <button type="submit">ส่งข้อความ</button>
-
         </form>
     </div>
 
